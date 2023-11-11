@@ -1,1 +1,105 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+    <title>Document</title>
+</head>
+<body>
+    
+<header>
+    <nav class="navigation">
+        <div class="container">
+        <ul class="navigation-list">
+            <li class="navigation-list-item"> <i class="fa-regular fa-user icons"></i>Profile</li>
+            <li class="navigation-list-item"><i class="fa-solid fa-cart-shopping icons"></i>Search </li>
+            <li class="navigation-list-item"> <i class="fa-regular fa-heart icons"></i>Favourite</li>
+        </ul>
+    </div>
+    </nav>
+</header>
+
+<section class="search">
+    <div class="container">
+        <div class="search">
+            <input type="search" placeholder="Find item">
+        </div>
+    </div>
+</section>
+
+<section class="swiper">
+    <!-- Slider main container -->
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide slide">
+        <div class="slider-text">
+            <span>[Oculus VR] Virtual Reality</span>
+            <p>VR box 360 original complete geme.VR gaming complete set of 2 remotes.</p>
+        <button class="btn_slide"><img src="./img/entypo_shop.png" alt="">Order now</button>
+      </div>
+        <div class="slider-img">
+          <img src="./img/unsplash_Zf0mPf4lG-U (1).png" alt="#" />
+        </div>
+    
+      </div>
+
+      <div class="swiper-slide slide">
+        <div class="slider-img">
+          <!-- <img -->
+            <!-- src=https://grizly.club/uploads/posts/2022-12/1670981800_grizly-club-p-vaildberriz-logotip-png-14.png alt="#" -->
+          <!-- /> -->
+        </div>
+      </div>
+
+    
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+<!-- </div> -->
+  </section>
+
+  <section class="catalog">
+    <div class="container">
+      <h2 class="catalog-title">Product</h2>
+      <div class="filter">
+        <ul class="filter-list">
+          <li class="filter-list-item">Top</li>
+          <li class="filter-list-item">Popular</li>
+          <li class="filter-list-item">Recommended</li>
+        </ul>
+      </div>
+   <div class="catalog-list">
+    <!-- <div class="catalog-item">
+      <div class="catalog-item-img">
+        <img src="./img/image 3.png" alt="#">
+      </div>
+      <div class="catalog-item-text">
+        <span class="item-title">Lexma G88</span>
+        <span class="item-type">Mouse</span>
+        <span class="item-price">$22.69</span>
+      </div>
+      <button class="addToCart">Add to Cart</button> -->
+    </div> 
+
+  </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
