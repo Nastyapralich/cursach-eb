@@ -22,6 +22,7 @@ letter-spacing: 0.96px;
 align-items: center;
 gap: 8px;
 }
+
 .filter-list-item{
     /* width: 66px; */ 
     border-radius: 16px;
@@ -29,6 +30,12 @@ gap: 8px;
     height: 36px;
     border: 1px solid white;
     color: white;
+    cursor: pointer;
+}
+
+.filter-list-item:hover{
+background: white;
+color: black;
 }
 
 .catalog-list{
@@ -43,7 +50,7 @@ width: 270px;
 height: 320px;
 border-radius: 8px;
 background: #323232;
-padding: 16px 22px 12px;
+padding: 16px 22px 30px;
 margin-bottom: 15px;
 }
 
@@ -56,9 +63,9 @@ margin-bottom: 17px;
 }
 
 .catalog-item-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* width: 100%; */
+    height:100%;
+    object-fit:contain;
 }
 
 .catalog-item-text{
@@ -106,7 +113,6 @@ margin-top: 7px;
      align-items: center;
      text-align: center;
     color: #FFF;
-   
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -119,4 +125,11 @@ border: none;
 border: 1px solid white;
 border-radius: 20px;
 margin-top: 15px;
+cursor: pointer;
+}
+
+.addToCart:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
