@@ -1,0 +1,19 @@
+.find-us{
+    margin-top: 20px;
+}
+
+.title-find, .form-title{
+    margin-top: 10px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+.find-wrap{
+    display: flex;
+}
+
+.find-text{
+    padding: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}

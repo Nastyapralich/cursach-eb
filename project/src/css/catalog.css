@@ -3,7 +3,7 @@
 }
 
 .catalog-title{
-    color: #FFF;
+    color: #000000;
 font-family: Quicksand;
 font-size: 24px;
 font-style: normal;
@@ -17,9 +17,9 @@ letter-spacing: 0.96px;
 }
 .filter-list{
     display: flex;
- 
-/* justify-content: center; */
+justify-content: center;
 align-items: center;
+text-align: start;
 gap: 8px;
 }
 
@@ -28,14 +28,14 @@ gap: 8px;
     border-radius: 16px;
      padding: 8px 24px;
     height: 36px;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
 .filter-list-item:hover{
-background: white;
-color: black;
+background: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
 }
 
 .catalog-list{
@@ -49,9 +49,10 @@ margin-top: 46px;
 width: 270px;
 height: 320px;
 border-radius: 8px;
-background: #323232;
+background: #ffffff;
 padding: 16px 22px 30px;
 margin-bottom: 15px;
+border: 1px solid black;
 }
 
 .catalog-item-img{
@@ -60,6 +61,7 @@ height: 150px;
 overflow: hidden;
 text-align: center;
 margin-bottom: 17px;
+position: relative;
 }
 
 .catalog-item-img img{
@@ -77,7 +79,7 @@ margin-bottom: 17px;
 }
 
 .item-title{
-    color: #FFF;
+    color: #000000;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
@@ -107,12 +109,12 @@ margin-top: 7px;
 }
 
 .addToCart{
-    width: 150px;
+    width: 170px;
      display: flex;
      justify-content: center;
      align-items: center;
      text-align: center;
-    color: #FFF;
+    color: #000000;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -122,14 +124,29 @@ background: transparent;
 margin: 0 auto;
 outline: none;
 border: none;
-border: 1px solid white;
+border: 1px solid rgb(0, 0, 0);
 border-radius: 20px;
 margin-top: 15px;
 cursor: pointer;
 }
 
 .addToCart:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(81, 71, 71);
+    color: rgb(212, 212, 212);
     cursor: pointer;
+}
+
+.fa-heart{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.fa-heart:hover{
+    color: #DA00FE;
+    transform: scale(120%);
 }

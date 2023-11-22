@@ -6,6 +6,7 @@
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
     <link
     rel="stylesheet"
@@ -16,12 +17,15 @@
 <body>
     
 <header>
+<div class="logo">
+  <span>CONSOLEBEL</span>
+</div>
     <nav class="navigation">
         <div class="container">
         <ul class="navigation-list">
-            <li class="navigation-list-item"> <i class="fa-regular fa-user icons"></i>Profile</li>
-            <li class="navigation-list-item"><i class="fa-solid fa-cart-shopping icons"></i>Search </li>
-            <li class="navigation-list-item"> <i class="fa-regular fa-heart icons"></i>Favourite</li>
+            <li class="navigation-list-item"><a href="./aboutUs.html" style="text-decoration: none; color: #000000;">О нас</a></li>
+            <li class="navigation-list-item">Корзина </li>
+            <li class="navigation-list-item"><a href="./like.html" style="text-decoration: none; color: #000000;">Избранное</a></li>
         </ul>
     </div>
     </nav>
@@ -30,7 +34,7 @@
 <section class="search">
     <div class="container">
         <div class="search">
-            <input type="search" placeholder="Find item">
+            <input type="search" placeholder="Поиск">
         </div>
     </div>
 </section>
@@ -44,7 +48,7 @@
         <div class="slider-text">
             <span>[Oculus VR] Virtual Reality</span>
             <p>VR box 360 original complete geme.VR gaming complete set of 2 remotes.</p>
-        <button class="btn_slide"><img src="./img/entypo_shop.png" alt="">Order now</button>
+        <button class="btn_slide"><img src="./img/entypo_shop.png" alt="">В корзину</button>
       </div>
         <div class="slider-img">
           <img src="./img/unsplash_Zf0mPf4lG-U (1).png" alt="#" />
@@ -53,14 +57,29 @@
       </div>
 
       <div class="swiper-slide slide">
+        <div class="slider-text">
+            <span>[Oculus VR] Virtual Reality</span>
+            <p>VR box 360 original complete geme.VR gaming complete set of 2 remotes.</p>
+        <button class="btn_slide"><img src="./img/entypo_shop.png" alt="">В корзину</button>
+      </div>
         <div class="slider-img">
-          <!-- <img -->
-            <!-- src=https://grizly.club/uploads/posts/2022-12/1670981800_grizly-club-p-vaildberriz-logotip-png-14.png alt="#" -->
-          <!-- /> -->
+          <img src="./img/unsplash_Zf0mPf4lG-U (1).png" alt="#" />
         </div>
+    
       </div>
 
+      <div class="swiper-slide slide">
+        <div class="slider-text">
+            <span>[Oculus VR] Virtual Reality</span>
+            <p>VR box 360 original complete geme.VR gaming complete set of 2 remotes.</p>
+        <button class="btn_slide"><img src="./img/entypo_shop.png" alt="">В корзину</button>
+      </div>
+        <div class="slider-img">
+          <img src="./img/unsplash_Zf0mPf4lG-U (1).png" alt="#" />
+        </div>
     
+      </div>
+  
       </div>
     </div>
     <!-- If we need pagination -->
@@ -77,104 +96,112 @@
 
   <section class="catalog">
     <div class="container">
-      <h2 class="catalog-title">Product</h2>
+      <h2 class="catalog-title">Каталог</h2>
       <div class="filter">
         <ul class="filter-list"> 
-           <li class="filter-list-item">All</li>
-          <li class="filter-list-item">Consoles</li>
-          <li class="filter-list-item">Game</li>
-          <li class="filter-list-item">Accessories</li>
+           <li class="filter-list-item">Все</li>
+          <li class="filter-list-item">Консоль</li>
+          <li class="filter-list-item">Игра</li>
+          <li class="filter-list-item">Аксессуар</li>
        
         </ul>
       </div>
    <div class="catalog-list">
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/image 27.png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Hogwards</span>
-        <span class="item-type">Game</span>
+        <span class="item-type">Игра</span>
         <span class="item-price">$69.99</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/image 33.png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Xbox Series X Forza</span>
-        <span class="item-type">Consoles</span>
+        <span class="item-type">Консоль</span>
         <span class="item-price">$450</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/alex-motoc-0POwK6iAiRQ-unsplash-removebg-preview 1 (1).png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Xbox Series X 1Tb</span>
-        <span class="item-type">Consoles</span>
+        <span class="item-type">Консоль</span>
         <span class="item-price">$309</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/image 27 (2).png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Red Dead Redemption II</span>
-        <span class="item-type">Game</span>
+        <span class="item-type">Игра</span>
         <span class="item-price">$49.69</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/814XrvQqMGL 1.png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Xbox Controller & Charging Stand</span>
-        <span class="item-type">Accessories</span>
+        <span class="item-type">Аксессуар</span>
         <span class="item-price">$350</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/unsplash_j9m9D2yzAVU.png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Xbox One S 1Tb</span>
-        <span class="item-type">Accessories</span>
+        <span class="item-type">Аксессуар</span>
         <span class="item-price">$220</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/image 27 (3).png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">FIFA 2023</span>
-        <span class="item-type">Game</span>
+        <span class="item-type">Игра</span>
         <span class="item-price">$49.99</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
     <div class="catalog-item">
       <div class="catalog-item-img">
+        <i class="fa-regular fa-heart"></i>
         <img src="./img/alex-motoc-0POwK6iAiRQ-unsplash-removebg-preview 1.png" alt="#">
       </div>
       <div class="catalog-item-text">
         <span class="item-title">Controller</span>
-        <span class="item-type">Xbox Wireless Controller</span>
+        <span class="item-type">Аксессуар</span>
         <span class="item-price">$370</span>
       </div>
-      <button class="addToCart">Add to Cart</button>
+      <button class="addToCart">В корзину</button>
     </div> 
 
   </section>
@@ -182,6 +209,77 @@
   <div class="cart-container">
   
   </div>
+
+  <section class="delivery">
+    <div class="container">
+      <h2 class="delivery-title">Доставка и оплата</h2>
+
+      <div class="delivery-wrap">
+<div class="delivery-left">
+  <h3>Виды оплаты</h3>
+<p>Поддерживается оплата как наличными, так и безналичными средствами</p>
+</div>
+
+<div class="delivery-right">
+  <h3>Доставка</h3>
+  <p>Доставка осуществляется в течении 2-х рабочих дней с 8-22. Возможен самовывоз в день заказа. </p>
+    <p>В пределах города доставка бесплатная. За город - 9 рублей</p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find-us">
+    <div class="container">
+      
+      <h2 class="title-find">Карта</h2>
+
+      <div class="find-wrap">
+        <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac989b9fa10487708da4ec51fd0bc11d208b497936f82be399ca770e0ee9b78a5&amp;source=constructor" width="548" height="405" frameborder="0"></iframe>
+        </div>
+
+        <div class="find-text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam cum, a alias accusantium ab ducimus laboriosam dolorem minus voluptatum quidem odit, doloribus rerum neque aspernatur beatae tempore vero? Cumque dicta vero deserunt harum quae expedita laudantium dolorem, corrupti, quibusdam quas a autem quaerat quidem distinctio mollitia odit ullam. Sed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+<footer>
+  <div class="container">
+<div class="footer-nav">
+<div class="footer-nav-first">
+<p>Режим работы: 10:00 - 20:00</p>
+<p> Доставка по Беларуси</p>
+</div>
+<div class="footer-nav-second">
+  <p>Магазин в Минске:
+
+    <p>Пр. Независимости д.58</p>
+    <p>ПН-СБ: 10:00 - 20:00</p>
+    <p>ВС: 11:00 - 19:00</p>
+    <p>МТС:+375 29 708-43-33</p>
+    <p> A1: +375 44 708-43-33</p>
+   <p>Life +375 25 935-09-17</p>
+  </p>
+    
+</div>
+<div class="footer-nav-third">
+  <p>Контактный телефон:</p>
+    <p>+375 29 708-43-33</p>
+    <p>E-mail:</p>
+    <p>zakaz@consolebel.by</p>
+    </p>
+</div>
+</div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 </body>

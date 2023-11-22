@@ -1,16 +1,16 @@
 .cart-container {
     display: none;
-    width: 500px;
+    width: 400px;
     height: 300px;
     position: fixed;
-    top: 100px;
-    right: 100px;
+    bottom: 10px;
+    right: 20px;
     background: #ffffff;
     z-index: 10;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid rgb(0, 0, 0);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
     .cart-item {
@@ -19,6 +19,7 @@
         margin-top: 5px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
         .cart-item_title {
@@ -44,19 +45,25 @@
             height: 50px;
             top: -6px;
             right: 10px;
-            background: rgb(203, 165, 203);
+            background: rgb(23, 23, 23);
             font-size: 50px;
             font-weight: 100;
             border: none;
             border-radius: 50%;
             position: relative;
             cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .delete-item:hover{
+            background-color: #5d585d;
+            transform: scale(110%);
         }
 
         .delete-item::before {
                 content: "×";
-                right: 12px;
-                top: -3px;
+                right: 8px;
+    top: -16px;
                 color: white;
                 position: absolute;
 
@@ -72,8 +79,14 @@
         border: none;
         color: white;
         font-size: 16px;
-        background: linear-gradient(102.42deg, #171617 59.69%, #d1ccd4);
+        background: #171617;
         cursor: pointer;
+        transition: 0.4s;
+        margin-top: 10px;
+    }
+
+    button:hover{
+background-color: rgb(90, 14, 90);
     }
 
 .none-cart {

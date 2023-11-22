@@ -1,4 +1,5 @@
-// Функция, добавляющая объект в localStorage
+import './slider.js';
+
 function addToCartHandler(event) {
   const catalogItem = event.target.closest(".catalog-item");
 
@@ -18,7 +19,7 @@ function addToCartHandler(event) {
     existingCartItems.push(itemData);
 
     localStorage.setItem("cart", JSON.stringify(existingCartItems));
-    alert("Item added to cart!");
+    alert("Товар добавлен в корзину!");
     // showCartFromLocalStorage();
   }
 }
@@ -65,9 +66,16 @@ function showCartFromLocalStorage() {
         cartItem.append(priceItem, titleItem, deleteItem);
         cartList.append(cartItem);
         removefromLS(deleteItem, cartItem);
+
       });
     }
   }
+}
+
+let priceSum = 0;
+function sum(price){
+priceSum += price;
+console.log(priceSum);
 }
 
 button.addEventListener("click", () => {
@@ -75,19 +83,16 @@ button.addEventListener("click", () => {
 });
 
 
-function removefromLS (deleteItem, cartItem){
-  deleteItem.addEventListener('click', function (){
-    deleteItem.parentElement.remove(cartItem)
-      console.log(deleteItem.closest('.item-type'));
-      let cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
-      cart.forEach((card, index) => {
-        if(deleteItem.parentElement.type == card.type){
-          cart.splice(index, index + 1);
-          localStorage.setItem("cart", JSON.stringify(cart));
-        }
-      })
-      localStorage.setItem("cart", JSON.stringify(cart));
-      showCartFromLocalStorage();
+function removefromLS(deleteItem, cartItem) {
+  deleteItem.addEventListener('click', function () {
+    cartItem.remove(); // Удаляем элемент из интерфейса
+    const titleToRemove = cartItem.querySelector('.cart-item_title').innerText;
+ console.log(titleToRemove);
+    let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    cart = cart.filter(item => `Товар ${item.title}` !== titleToRemove); // Фильтруем товары, оставляя только те, которые не совпадают с удаляемым
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showCartFromLocalStorage();
   });
 }
 
@@ -117,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
       catalogItems.forEach(catalogItem => {
         const itemType = catalogItem.querySelector('.item-type').textContent.toLowerCase();
 
-        if (filterType === 'all' || filterType === itemType) {
+        if (filterType === 'все' || filterType === itemType) {
           catalogItem.style.display = 'block';
         } else {
           catalogItem.style.display = 'none';
@@ -126,3 +131,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+const like = document.querySelectorAll('.fa-heart');
+
+like.forEach((likes) =>{
+  likes.addEventListener('click', setLike);
+});
+
+function setLike (event){
+
+  const catalogItem = event.target.closest(".catalog-item");
+
+  if (catalogItem) {
+    const title = catalogItem.querySelector(".item-title").innerText;
+    const type = catalogItem.querySelector(".item-type").innerText;
+    const price = catalogItem.querySelector(".item-price").innerText;
+
+    const itemData = {
+      title: title,
+      type: type,
+      price: price,
+    };
+
+    const existingLikes = JSON.parse(localStorage.getItem("likes")) || [];
+
+    existingLikes.push(itemData);
+
+    localStorage.setItem("likes", JSON.stringify(existingLikes));
+    alert("Товар добавлен в избранное");
+}
+}
+
+const cartHeader = document.getElementsByClassName('navigation-list-item')[1];
+console.log(cartHeader);
+cartHeader.addEventListener('click', showCartFromLocalStorage)
+

@@ -1,0 +1,39 @@
+.delivery{
+    margin-top: 20px;
+}
+
+.delivery-title{
+    color: rgb(0, 0, 0);
+}
+
+.delivery-wrap{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-left{
+    padding: 20px;
+    text-align: left;
+}
+
+.delivery-left h3{
+    color: rgb(0, 0, 0);
+}
+
+.delivery-left p{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+
+.delivery-right{
+    padding: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.delivery-right p{
+    font-size: 18px;
+    /* font-size: 14px; */
+}
