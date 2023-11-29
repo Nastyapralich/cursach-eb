@@ -1,4 +1,4 @@
-import './slider.js';
+import "./slider.js";
 
 function addToCartHandler(event) {
   const catalogItem = event.target.closest(".catalog-item");
@@ -7,11 +7,13 @@ function addToCartHandler(event) {
     const title = catalogItem.querySelector(".item-title").innerText;
     const type = catalogItem.querySelector(".item-type").innerText;
     const price = catalogItem.querySelector(".item-price").innerText;
+    const img = catalogItem.querySelectorAll(img).innerHTML;
 
     const itemData = {
       title: title,
       type: type,
       price: price,
+      img: img,
     };
 
     const existingCartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -28,7 +30,7 @@ const addToCartButtons = document.querySelectorAll(".addToCart");
 
 addToCartButtons.forEach((button) => {
   button.addEventListener("click", addToCartHandler);
-  button.addEventListener("click", showCartFromLocalStorage)
+  button.addEventListener("click", showCartFromLocalStorage);
 });
 
 const cartC = document.querySelector(".cart-container");
@@ -66,81 +68,73 @@ function showCartFromLocalStorage() {
         cartItem.append(priceItem, titleItem, deleteItem);
         cartList.append(cartItem);
         removefromLS(deleteItem, cartItem);
-
       });
     }
   }
 }
 
 let priceSum = 0;
-function sum(price){
-priceSum += price;
-console.log(priceSum);
+function sum(price) {
+  priceSum += price;
+  console.log(priceSum);
 }
 
 button.addEventListener("click", () => {
   cartC.classList.remove("active");
 });
 
-
 function removefromLS(deleteItem, cartItem) {
-  deleteItem.addEventListener('click', function () {
+  deleteItem.addEventListener("click", function () {
     cartItem.remove(); // Удаляем элемент из интерфейса
-    const titleToRemove = cartItem.querySelector('.cart-item_title').innerText;
- console.log(titleToRemove);
-    let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-    cart = cart.filter(item => `Товар ${item.title}` !== titleToRemove); // Фильтруем товары, оставляя только те, которые не совпадают с удаляемым
+    const titleToRemove = cartItem.querySelector(".cart-item_title").innerText;
+    console.log(titleToRemove);
+    let cart = localStorage.getItem("cart")
+      ? JSON.parse(localStorage.getItem("cart"))
+      : [];
+    cart = cart.filter((item) => `Товар ${item.title}` !== titleToRemove); // Фильтруем товары, оставляя только те, которые не совпадают с удаляемым
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     showCartFromLocalStorage();
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const filterItems = document.querySelectorAll(".filter-list-item");
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Получаем все элементы списка фильтра
-  const filterItems = document.querySelectorAll('.filter-list-item');
+  const catalogItems = document.querySelectorAll(".catalog-item");
 
-  // Получаем все элементы каталога
-  const catalogItems = document.querySelectorAll('.catalog-item');
-
-  // Добавляем обработчик события клика к каждому элементу фильтра
-  filterItems.forEach(filterItem => {
-    filterItem.addEventListener('click', function () {
-      // Убираем класс 'active' у всех элементов фильтра
-      filterItems.forEach(item => {
-        item.classList.remove('active');
+  filterItems.forEach((filterItem) => {
+    filterItem.addEventListener("click", function () {
+      filterItems.forEach((item) => {
+        item.classList.remove("active");
       });
 
-      // Добавляем класс 'active' только к выбранному элементу фильтра
-      filterItem.classList.add('active');
+      filterItem.classList.add("active");
 
-      // Получаем тип продукта, соответствующий выбранному элементу фильтра
       const filterType = filterItem.textContent.toLowerCase();
 
-      // Перебираем все элементы каталога и скрываем/показываем их в зависимости от типа
-      catalogItems.forEach(catalogItem => {
-        const itemType = catalogItem.querySelector('.item-type').textContent.toLowerCase();
+      catalogItems.forEach((catalogItem) => {
+        const itemType = catalogItem
+          .querySelector(".item-type")
+          .textContent.toLowerCase();
 
-        if (filterType === 'все' || filterType === itemType) {
-          catalogItem.style.display = 'block';
+        if (filterType === "все" || filterType === itemType) {
+          catalogItem.style.display = "block";
         } else {
-          catalogItem.style.display = 'none';
+          catalogItem.style.display = "none";
         }
       });
     });
   });
 });
 
+const like = document.querySelectorAll(".fa-heart");
 
-const like = document.querySelectorAll('.fa-heart');
-
-like.forEach((likes) =>{
-  likes.addEventListener('click', setLike);
+like.forEach((likes) => {
+  likes.addEventListener("click", setLike);
 });
 
-function setLike (event){
-
+function setLike(event) {
   const catalogItem = event.target.closest(".catalog-item");
 
   if (catalogItem) {
@@ -160,10 +154,30 @@ function setLike (event){
 
     localStorage.setItem("likes", JSON.stringify(existingLikes));
     alert("Товар добавлен в избранное");
-}
+  }
 }
 
-const cartHeader = document.getElementsByClassName('navigation-list-item')[1];
+const cartHeader = document.getElementsByClassName("navigation-list-item")[1];
 console.log(cartHeader);
-cartHeader.addEventListener('click', showCartFromLocalStorage)
+cartHeader.addEventListener("click", showCartFromLocalStorage);
 
+const input = document.querySelector("input");
+input.addEventListener("input", search);
+
+function search() {
+  const searchTerm = input.value.toLowerCase();
+  const cards = document.querySelectorAll(".catalog-item");
+
+  cards.forEach((card) => {
+    const title = card.querySelector(".item-title").textContent.toLowerCase();
+    const description = card
+      .querySelector(".item-type")
+      .textContent.toLowerCase();
+
+    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}

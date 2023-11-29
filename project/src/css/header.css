@@ -10,9 +10,21 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(184, 177, 177);
     
     /* position: fixed; */
+}
+
+.phones{
+display: flex;
+flex-direction: column;
+}
+.phones li{
+    font-size: 14px;
+}
+
+.fa-phone{
+    margin-right: 5px;
 }
 .navigation-list{
     display: flex;

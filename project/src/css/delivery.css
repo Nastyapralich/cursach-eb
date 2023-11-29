@@ -9,11 +9,12 @@
 .delivery-wrap{
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .delivery-left{
-    padding: 20px;
+    /* padding: 20px; */
     text-align: left;
 }
 
@@ -28,7 +29,7 @@
 
 
 .delivery-right{
-    padding: 20px;
+    /* padding: 20px; */
     text-align: left;
     color: rgb(0, 0, 0);
 }
