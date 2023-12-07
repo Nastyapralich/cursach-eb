@@ -181,3 +181,27 @@ function search() {
     }
   });
 }
+
+
+// валидация
+document.getElementById('input-submit').addEventListener('click', function(event) {
+  event.preventDefault();
+   
+  let name = document.getElementById('input-name').value;
+  let email = document.getElementById('input-email').value;
+  let subject = document.getElementById('input-subject').value;
+  let message = document.getElementById('input-message').value;
+   
+  if (name === '' || email === '' || subject === '' || message === '') {
+     alert('Все поля должны быть заполнены!');
+  } else if (!validateEmail(email)) {
+     alert('Неправильный формат Email!');
+  } else {
+     alert('Заявка успешно отправлена!');
+  }
+ });
+ 
+ function validateEmail(email) {
+  let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+ }

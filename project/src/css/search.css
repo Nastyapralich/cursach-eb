@@ -4,6 +4,7 @@
 
 .search input{
 display: flex;
+justify-content: center;
 width: 382px;
 padding: 12px 24px;
 align-items: center;

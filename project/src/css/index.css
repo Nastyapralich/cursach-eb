@@ -9,6 +9,7 @@
 @import url(./about.css);
 @import url(./header.css);
 @import url(./footer.css);
+@import url(./form.css);
 
 
 
@@ -21,12 +22,45 @@
     font-style: none;
   }
 
-  body{
+  /* body{
 background-color: #ffffff;
+height: 100%;
+position: relative;
   }
 
   .container {
     max-width: 1170px;
     padding: 0 15px;
     margin: auto;
+    min-height: 100%;
+  } */
+
+
+  html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    min-height: 100%;
+  }
+  
+  header {
+    flex: 0 0 auto;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  footer {
+    flex: 0 0 auto;
   }

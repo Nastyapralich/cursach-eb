@@ -1,0 +1,80 @@
+/* @import "compass/css3"; */
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+.form{
+margin: 60px 0;
+}
+
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  
+}
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     border: b;
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     box-shadow: 0 10px 1px rgba(black, 0.1);
+     resize: none;
+    
+  }
+     input:focus {
+    box-shadow: 0 0px 2px red;
+    }
+  
+  
+  #input-submit {
+     color: rgb(0, 0, 0); 
+     transition: 0.4s;
+     cursor: pointer;
+  }
+     #input-submit:hover {
+ 
+      box-shadow: 0 3px 3px black; 
+    }
+  
+  
+  textarea {
+      height: 126px;
+      /* border: 1px solid black; */
+      box-shadow: 0 10px 1px rgba(black, 0.1);
+      border-radius: 20px;
+  }
+
+  textarea:focus{
+   box-shadow: 0 3px 3px black;
+  }
+
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
